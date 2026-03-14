@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from '../employee';
+import { EmployeeService } from '../employee-service';
 
 @Component({
   selector: 'app-list-employee',
@@ -8,23 +9,17 @@ import { Employee } from '../employee';
   styleUrl: './list-employee.css',
 })
 export class ListEmployee {
-    title="Employees Details List :-"
-    employees:Employee[]=[];
+    
+  constructor(private employeeService:EmployeeService){}
 
+    employeesList:Employee[]=[];
+    // this hook will call when component start
     ngOnInit():void{
-      this.employees=[
-        {
-          "id":1,
-          "firstName":"Govind",
-          "lastName":"kumar",
-          "salary":95000
-        },
-         {
-          "id":2,
-          "firstName":"Ram",
-          "lastName":"Ji",
-          "salary":9999999999
-        }
-      ]
+        this.getEmployeeList();
+    }
+    private getEmployeeList(){
+          this.employeeService.getEmployeeList().subscribe(data=>{
+            this.employeesList=data;  
+          })
     }
 }

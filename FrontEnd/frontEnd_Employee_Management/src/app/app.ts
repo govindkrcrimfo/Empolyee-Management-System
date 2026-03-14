@@ -8,5 +8,5 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   //protected readonly title = signal('frontEnd_Employee_Management');
-  title="Employee details list:-"
+  title="Employee details list :-"
 }
