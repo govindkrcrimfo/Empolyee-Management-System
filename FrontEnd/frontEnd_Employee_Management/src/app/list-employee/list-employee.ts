@@ -19,6 +19,7 @@ export class ListEmployee {
     }
     private getEmployeeList(){
           this.employeeService.getEmployeeList().subscribe(data=>{
+            console.log(data);
             this.employeesList=data;  
           })
     }
