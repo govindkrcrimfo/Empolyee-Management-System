@@ -7,5 +7,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('frontEnd_Employee_Management');
+  //protected readonly title = signal('frontEnd_Employee_Management');
+  title="Employee details list:-"
 }
