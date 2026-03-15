@@ -7,10 +7,10 @@ import { Employee } from './employee';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private baseUrl="http://localhost:8085/employees";
-  constructor(private httpClient:HttpClient){}
+  private baseUrl = "http://localhost:8085/employees";
+  constructor(private httpClient: HttpClient) { }
 
-  getEmployeeList():Observable<Employee[]>{
-       return this.httpClient.get<Employee[]>(`${this.baseUrl}`);
+  getEmployeeList(): Observable<Employee[]> {
+    return this.httpClient.get<Employee[]>(`${this.baseUrl}`);
   }
 }

@@ -8,8 +8,8 @@ import { Employee } from '../employee';
   styleUrl: './create-employee.css',
 })
 export class CreateEmployee {
-  employee:Employee=new Employee();
-  onSubmit(){
+  employee: Employee = new Employee();
+  onSubmit() {
     console.log(this.employee);
   }
 }
