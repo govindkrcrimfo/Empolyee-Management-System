@@ -13,10 +13,12 @@ export class ListEmployee {
   constructor(private employeeService: EmployeeService) { }
 
   employeesList: Employee[] = [];
-  // this hook will call when component start
+  //this hook will call when component start
   ngOnInit(): void {
     this.getEmployeeList();
   }
+
+
   private getEmployeeList() {
     this.employeeService.getEmployeeList().subscribe(data => {
       this.employeesList = data;
