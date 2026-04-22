@@ -27,12 +27,14 @@ public class EmployeeController {
 
     @GetMapping("/employees/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable int id) {
+        System.out.println("Inside employee controller , getEmployeeById method for id = " + id);
         Employee emp = employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("employees not found with id = " + id));
         return ResponseEntity.ok(emp);
     }
 
     @PutMapping("/employees/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
+        System.out.println("Inside Employee controller , Update Employee method for emp id = " + id);
         Employee employee1 = employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employees not found with id = " + id + " to update "));
         employee1.setFirstName(employee.getFirstName());
         employee1.setLastName(employee.getLastName());
