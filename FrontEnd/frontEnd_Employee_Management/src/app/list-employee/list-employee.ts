@@ -29,4 +29,13 @@ export class ListEmployee {
   updateEmployee(id:number){
       this.route.navigate(['updateEmployee',id])
     }
+  deletEmployee(id:number){
+    this.employeeService.deleteEmployeeById(id).subscribe(data=>{
+      this.getEmployeeList();
+      });
+    }
+//    gotoEmployeeList(){
+//         this.route.navigate(['/employees']);
+//       }
+
 }

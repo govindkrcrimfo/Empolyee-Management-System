@@ -19,6 +19,7 @@ export class UpdateEmployee {
     and ngOnInit will load and fetch id form url/params and then call get getEmployeeById
     this id and employee will be required to updateEmployeeById
    */
+
   ngOnInit(): void {
     this.id=this.activateRoute.snapshot.params['id'];
      console.log("ID:", this.id);
