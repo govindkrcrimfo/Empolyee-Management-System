@@ -34,8 +34,9 @@ export class ListEmployee {
       this.getEmployeeList();
       });
     }
-//    gotoEmployeeList(){
-//         this.route.navigate(['/employees']);
-//       }
+
+viewEmployee(id:number){
+  this.route.navigate(['employeeDetails',id]);
+  }
 
 }

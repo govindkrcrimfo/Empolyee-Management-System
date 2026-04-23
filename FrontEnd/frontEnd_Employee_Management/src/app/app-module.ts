@@ -8,6 +8,7 @@ import {UpdateEmployee } from './update-employee/update-employee';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CreateEmployee } from './create-employee/create-employee';
 import { FormsModule } from '@angular/forms';
+import { EmployeeDetails } from './employee-details/employee-details';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     App,
     ListEmployee,
     CreateEmployee,
-    UpdateEmployee
+    UpdateEmployee,
+    EmployeeDetails
   ],
   imports: [
     BrowserModule,
